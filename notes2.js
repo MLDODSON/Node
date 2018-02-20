@@ -3,12 +3,26 @@ console.log("Starting notes2.js!");
 //module.exports.age = 50;
 
 //This is an arrow function
-/*module.exports.addNote = () => {
-	console.log("addNote");	
-	return "New note.";
+var addNote = (title, body) => {
+	console.log("Adding Note", title, body);	
 };
-*/
 
-module.exports.add = (x, z) => {
-	return x + z;
+var getAll = () => {
+	console.log("Getting all notes");	
+};
+
+var getNote = (title) => {
+	console.log("Getting note", title);	
+};
+
+var removeNote = (title) => {
+	console.log("Removing Note", title);	
+};
+
+
+module.exports = {
+	addNote,
+	getAll,
+	getNote,
+	removeNote
 };

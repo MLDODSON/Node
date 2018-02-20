@@ -17,13 +17,21 @@ console.log("Yargs", argv);
 
 
 if (command === "add") {
-	notes.addNote(argv.title, argv.body);
+   var note = notes.addNote(argv.title, argv.body);
+   if (note) {
+	console.log("Note created");
+	   console.log("--");
+	   console.log("Title: " + note.title);
+	   console.log("Body: " + note.body);
+	} else {
+		console.log("Note title taken");
+	}
 } else if (command === "list") {
-	notes.getAll();
+  notes.getAll();
 } else if (command === "read") {
-	notes.getNote(argv.title);
+  notes.getNote(argv.title);
 } else if (command === "remove") {
-	notes.removeNote(argv.title);
+  notes.removeNote(argv.title);
 } else {
 	console.log("Command not recognized.");
 }

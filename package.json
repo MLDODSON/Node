@@ -17,8 +17,13 @@
   },
   "homepage": "https://github.com/MLDODSON/Node#readme",
   "dependencies": {
+    "cat-me": "^1.0.3",
+    "knock-knock-jokes": "^1.7.0",
     "lodash": "^4.17.5",
     "nodemon": "^1.15.1",
+    "one-liner-joke": "^1.0.0",
+    "star-wars-quotes": "^1.0.2",
+    "startwars-names": "^1.0.0",
     "yargs": "^11.0.0"
   }
 }

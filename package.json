@@ -18,6 +18,7 @@
   "homepage": "https://github.com/MLDODSON/Node#readme",
   "dependencies": {
     "cat-me": "^1.0.3",
+    "express": "^4.16.2",
     "knock-knock-jokes": "^1.7.0",
     "lodash": "^4.17.5",
     "nodemon": "^1.15.1",

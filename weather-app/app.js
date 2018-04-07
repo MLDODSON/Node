@@ -1,7 +1,24 @@
 const request = require("request");
+const yargs = require("yargs");
+
+const argv = yargs
+	.option({
+		a: {
+		  demand: true,
+		  alias: "address",
+		  describe: "Address to fetch weather for",
+		  string: true
+		}
+	})
+
+	.help()
+	.alias("help", "h")
+	.argv;
+
+var encodedAddress = encodeURIComponent(argv.a);
 
 request({
-	url: "https://maps.googleapis.com/maps/api/geocode/json?address=2107%20East%20Adelaide%20Saint%20Louis",
+	url: `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`,
 	json: true
 }, (error, response, body) => {
 	console.log(`Address: ${body.results[0].formatted_address}`);
